@@ -5,7 +5,9 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import CardSection from './src/components/CardSection'
 import Card from "./src/components/Card";
 import Checkbox from "./src/components/Checkbox";
+import MenuIconInfo from "./src/components/MenuIconInfo";
 import IcoMoonIcon from './src/assets/icomoon';
+import SettingsScreen from './src/page/SettingsScreen';
 
 // name就是svg生成字体图标时的文件名, 在selection.json里有定义
 
@@ -79,22 +81,20 @@ class ShopcarScreen extends React.Component {
                         <Text>管理</Text>
                     </Card>
                     <Text>
-                    <IcoMoonIcon
-                        name='uniE900'
-                        size={25}
-                        color='#fff'
-                    />
-                    <AntDesign name={'stepforward'}/>
-                    <FontAwesome
-                        name={'wpforms'}
-                        size={30}
-                        color='#fff'
-                    />
-                    <Icon name='md-home' size={30} color='blue'/>
-                </Text>
+                        <IcoMoonIcon
+                            name='uniE900'
+                            size={25}
+                            color='#fff'
+                        />
+                        <AntDesign name={'stepforward'}/>
+                        <FontAwesome
+                            name={'wpforms'}
+                            size={30}
+                            color='#fff'
+                        />
+                        <Icon name='md-home' size={30} color='blue'/>
+                    </Text>
                 </CardSection>
-
-
 
 
                 <CardSection style={{
@@ -198,194 +198,7 @@ class ShopcarScreen extends React.Component {
 }
 
 
-class SettingsScreen extends React.Component {
-    render() {
-        return (
-            <View style={{backgroundColor: '#efefef'}}>
-                {/*<CardSection style={{padding: 0, marginBottom: 8}}>*/}
-                {/*    <Image style={styles.imageStyle}*/}
-                {/*           source={{uri: 'https://my-firstrn-text.oss-cn-beijing.aliyuncs.com/images/img.jpg'}}>*/}
-                {/*    </Image>*/}
-                {/*</CardSection>*/}
 
-                <CardSection style={{padding: 0, backgroundColor: '#efb200'}}>
-                    <Card style={{
-                        flex: 1,
-                        flexDirection: 'row',
-                        justifyContent: 'space-between',
-                        borderWidth: 0
-                    }}>
-                        <Text style={{fontSize: 20}}></Text>
-                        <Text></Text>
-                    </Card>
-                </CardSection>
-                <CardSection style={{
-                    padding: 0,
-                    backgroundColor: '#efb200',
-                    flexDirection: 'column',
-                }}>
-
-                    <Card style={{
-                        flexDirection: 'row',
-                        justifyContent: 'space-between',
-                        borderWidth: 0,
-                    }}>
-                        <Image style={{
-                            height: 60,
-                            width: 60,
-                            borderRadius: 50,
-                            overflow: 'hidden'
-                        }}
-                               source={{uri: 'https://my-firstrn-text.oss-cn-beijing.aliyuncs.com/images/img.jpg'}}>
-                        </Image>
-
-                        <Card style={{
-                            flex: 1,
-                            flexDirection: 'row',
-                            justifyContent: 'space-between',
-                            borderWidth: 0
-                        }}>
-                            <Text style={{fontSize: 20}}>往事666</Text>
-                            <Text>退款/售后</Text>
-                        </Card>
-
-                    </Card>
-
-
-                    <Card style={{
-                        flexDirection: 'row',
-                        justifyContent: 'space-between',
-                        borderWidth: 0,
-                        padding: 18,
-                    }}>
-                        <View style={{alignItems: 'center'}}>
-                            <Text>23</Text>
-                            <Text>收藏夹</Text>
-                        </View>
-                        <View style={{alignItems: 'center'}}>
-                            <Text>23</Text>
-                            <Text>收藏夹</Text>
-                        </View>
-                        <View style={{alignItems: 'center'}}>
-                            <Text>23</Text>
-                            <Text>收藏夹</Text>
-                        </View>
-                        <View style={{alignItems: 'center'}}>
-                            <Text>23</Text>
-                            <Text>收藏夹</Text>
-                        </View>
-                        {/*<Text>关注店铺</Text>*/}
-                        {/*<Text>足迹</Text>*/}
-                        {/*<Text>红包卡劵</Text>*/}
-                    </Card>
-                </CardSection>
-
-
-                <CardSection style={{
-                    margin: 8,
-                    paddingBottom: 8,
-                    flexDirection: 'column',
-                    backgroundColor: '#FFF',
-                    borderRadius: 10
-                }}>
-
-                    <Card style={{
-                        flexDirection: 'row',
-                        justifyContent: 'space-between',
-                        borderWidth: 0
-                    }}>
-                        <Text style={{fontSize: 20}}>评价</Text>
-                        <Text>退款/售后</Text>
-                    </Card>
-
-                </CardSection>
-
-
-                <CardSection style={{
-                    margin: 8,
-                    padding: 0,
-                    paddingBottom: 8,
-                    flexDirection: 'column',
-                    backgroundColor: '#FFF',
-                    borderRadius: 10
-                }}>
-
-                    <Card style={{
-                        flexDirection: 'row',
-                        justifyContent: 'space-between',
-                        borderWidth: 0,
-                        borderBottomWidth: 1,
-                    }}>
-                        <Text style={{fontSize: 20}}>我的订单</Text>
-                        <Text>查看全部订单></Text>
-                    </Card>
-                    <Card style={{
-                        flexDirection: 'row',
-                        justifyContent: 'space-between',
-                        borderWidth: 0
-                    }}>
-                        <Text>待付款</Text>
-                        <Text>待发货</Text>
-                        <Text>待收货</Text>
-                        <Text>评价</Text>
-                        <Text>退款/售后</Text>
-                    </Card>
-                    <Card style={{backgroundColor: '#efefef', borderRadius: 10, borderWidth: 0, padding: 8}}>
-                        <Text>退款/售后></Text>
-                    </Card>
-
-
-                </CardSection>
-
-
-                <CardSection style={{
-                    margin: 8,
-                    padding: 0,
-                    paddingBottom: 8,
-                    flexDirection: 'column',
-                    backgroundColor: '#FFF',
-                    borderRadius: 10
-                }}>
-
-                    <Card style={{
-                        flexDirection: 'row',
-                        justifyContent: 'space-between',
-                        borderWidth: 0,
-                        borderBottomWidth: 1,
-                    }}>
-                        <Text style={{fontSize: 20}}>必备工具</Text>
-                        <Text>查看全部工具></Text>
-                    </Card>
-                    <Card style={{
-                        padding: 18,
-                        flexDirection: 'row',
-                        justifyContent: 'space-between',
-                        borderWidth: 0
-                    }}>
-                        <Text>待付款</Text>
-                        <Text>待发货</Text>
-                        <Text>待收货</Text>
-                        <Text>评价</Text>
-                    </Card>
-                    <Card style={{
-                        padding: 18,
-                        flexDirection: 'row',
-                        justifyContent: 'space-between',
-                        borderWidth: 0
-                    }}>
-                        <Text>待付款</Text>
-                        <Text>待发货</Text>
-                        <Text>待收货</Text>
-                        <Text>评价</Text>
-                    </Card>
-
-
-                </CardSection>
-            </View>
-
-        );
-    }
-}
 
 const styles = StyleSheet.create({
     detil: {
@@ -415,14 +228,19 @@ const styles = StyleSheet.create({
         flex: 1,
         borderRadius: 3,
         overflow: 'hidden'
+    },
+    iconStyle: {
+        alignItems: 'center',
+        padding: 8,
     }
 });
 
 const TabNavigator = createBottomTabNavigator(
     {
-        Home: HomeNavigator,
-        Shopcar: ShopcarScreen,
-        Settings: SettingsScreen,
+        首页: HomeNavigator,
+        购物车: ShopcarScreen,
+        //Settings: SettingsScreen,
+        个人中心: SettingsScreen,
 
     },
     {
@@ -435,13 +253,15 @@ const TabNavigator = createBottomTabNavigator(
                 const {routeName} = navigation.state;
                 let IconComponent = Icon;
                 let iconName;
-                if (routeName === 'Home') {
+                if (routeName === '首页') {
                     iconName = `ios-information-circle${focused ? '' : '-outline'}`;
                     // Sometimes we want to add badges to some icons.
                     // You can check the implementation below.
                     // IconComponent = HomeIconWithBadge;
-                } else if (routeName === 'Settings') {
+                } else if (routeName === '个人中心') {
                     iconName = `ios-options`;
+                } else if (routeName === '购物车') {
+                    iconName = `ios-cart`;
                 }
 
                 // You can return any component that you like here!
