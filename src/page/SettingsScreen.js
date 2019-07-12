@@ -27,8 +27,10 @@ class SettingsScreen extends React.Component {
                     </Card>
                 </CardSection>
                 <CardSection style={{
+
                     backgroundColor: '#efb200',
                     flexDirection: 'column',
+                    paddingBottom: 28
                 }}>
 
                     <Card style={{
@@ -81,14 +83,12 @@ class SettingsScreen extends React.Component {
                             <Text>23</Text>
                             <Text>收藏夹</Text>
                         </View>
-                        {/*<Text>关注店铺</Text>*/}
-                        {/*<Text>足迹</Text>*/}
-                        {/*<Text>红包卡劵</Text>*/}
                     </Card>
                 </CardSection>
 
 
                 <CardSection style={{
+                    marginTop: -28,
                     margin: 8,
                     flexDirection: 'column',
                     backgroundColor: '#FFF',
@@ -100,7 +100,7 @@ class SettingsScreen extends React.Component {
                         marginBottom:8,
                         flexDirection: 'row',
                         justifyContent: 'space-between',
-                        //borderWidth: 0,
+                        borderWidth: 0,
                         alignItems: 'center',
                         // lineHeight: 40
                     }}>
