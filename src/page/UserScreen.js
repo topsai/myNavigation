@@ -5,7 +5,7 @@ import Card from "../components/Card";
 import Icon from "react-native-vector-icons/Ionicons";
 import MenuIconInfo from "../components/MenuIconInfo";
 
-class SettingsScreen extends React.Component {
+class UserScreen extends React.Component {
     render() {
         return (
             <View style={{backgroundColor: '#efefef'}}>
@@ -225,4 +225,4 @@ class SettingsScreen extends React.Component {
     }
 }
 
-export default SettingsScreen;
+export default UserScreen;

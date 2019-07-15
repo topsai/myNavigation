@@ -2,7 +2,7 @@ import React from 'react';
 import {Text, View, Button, StyleSheet, Image} from 'react-native';
 import {createBottomTabNavigator, createAppContainer, createStackNavigator} from 'react-navigation';
 import Icon from 'react-native-vector-icons/Ionicons';
-import SettingsScreen from './src/page/SettingsScreen';
+import UserScreen from './src/page/UserScreen';
 import ShopcarScreen from './src/page/ShopcarScreen';
 import HomeNavigator from './src/page/HomeNavigator';
 
@@ -13,8 +13,8 @@ const TabNavigator = createBottomTabNavigator(
     {
         首页: HomeNavigator,
         购物车: ShopcarScreen,
-        //Settings: SettingsScreen,
-        个人中心: SettingsScreen,
+        //Settings: UserScreen,
+        个人中心: UserScreen,
 
     },
     {

@@ -1,20 +1,32 @@
 import React from 'react';
-import {Button, Image, Text, View, TextInput, StyleSheet} from "react-native";
+import {
+    Button,
+    Image,
+    Text,
+    View,
+    TextInput,
+    StyleSheet,
+    Dimensions,
+    ImageBackground,
+    TouchableOpacity
+} from "react-native";
 import CardSection from "../../components/CardSection";
 import Card from "../../components/Card";
 import Checkbox from "../../components/Checkbox";
 import MenuIconInfo from "../../components/MenuIconInfo";
 import Swiper from 'react-native-swiper';
-import { Dimensions } from "react-native";
+import Icon from "react-native-vector-icons/Ionicons";
 
 //也可以在这里先取出屏幕的宽高
-let windowWidth = Dimensions.get('window').width;
-let windowHeight = Dimensions.get('window').Height;
+// let width = Dimensions.get('window').width;
+// let windowHeight = Dimensions.get('window').Height;
+const {width} = Dimensions.get('window');
+
 class HomeScreen extends React.Component {
     render() {
         return (
-            <View style={{backgroundColor: '#efefef'}}>
-                <CardSection style={{padding: 10, backgroundColor: '#efb200', paddingBottom: 40}}>
+            <View>
+                <CardSection style={{padding: 0, backgroundColor: '#ef8f04', paddingBottom: 8}}>
                     <Card style={{
                         flex: 1,
                         flexDirection: 'row',
@@ -24,7 +36,7 @@ class HomeScreen extends React.Component {
                     }}>
                         <MenuIconInfo name={'ios-add'} text={'扫一扫'}/>
                         <TextInput
-                            style={{height: 40, borderRadius: 18, backgroundColor: '#FFF', width: 200}}
+                            style={{height: 40, borderRadius: 18, backgroundColor: '#FFF', width: 250}}
                             placeholder=""
                             onChangeText={(text) => this.setState({text})}
                         />
@@ -32,152 +44,163 @@ class HomeScreen extends React.Component {
                     </Card>
                 </CardSection>
 
-                <CardSection>
-                    <Swiper
-                        style={styles.wrapper}
-                        //height={width * 40 / 75}
-                        showsButtons={false}
-                        autoplay={true}
-                        paginationStyle={styles.paginationStyle}
-                        dotStyle={styles.dotStyle}
-                        activeDotStyle={styles.activeDotStyle}
-                    >
-                        <Image source={{uri: 'https://my-firstrn-text.oss-cn-beijing.aliyuncs.com/images/img.jpg'}}
-                               style={styles.bannerImg}/>
+
+                <View style={styles.container} onPress={() => alert('ddddd')}>
+                    <Swiper style={styles.wrapper} height={200} horizontal={true} autoplay>
+                        <TouchableOpacity style={styles.slide1}
+                                          onPress={() => this.props.navigation.navigate('Detils')}>
+                            <ImageBackground style={{
+                                height: 200, width, overflow: 'hidden', justifyContent: 'center',
+                                alignItems: 'center',
+                            }}
+                                             source={require('../../images/img/1.jpg')}>
+                                <Text style={styles.text}>Beautiful</Text>
+                            </ImageBackground>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.slide2}
+                                          onPress={() => this.props.navigation.navigate('Detils')}>
+
+                            <ImageBackground style={{
+                                height: 200, width, overflow: 'hidden', justifyContent: 'center',
+                                alignItems: 'center',
+                            }}
+                                             source={require('../../images/img/2.jpg')}>
+                                <Text style={styles.text}>Beautiful</Text>
+                            </ImageBackground>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={styles.slide3}
+                                          onPress={() => this.props.navigation.navigate('Detils')}>
+
+                            <ImageBackground style={{
+                                height: 200, width, overflow: 'hidden', justifyContent: 'center',
+                                alignItems: 'center',
+                            }}
+                                             source={require('../../images/img/3.jpg')}>
+                                <Text style={styles.text}>Beautiful</Text>
+                            </ImageBackground>
+                        </TouchableOpacity>
                     </Swiper>
-                </CardSection>
+                </View>
 
 
                 <CardSection style={{
-                    marginTop: -28,
-                    margin: 18,
-                    padding: 18,
+                    margin: 8,
+                    padding: 0,
+                    paddingBottom: 8,
                     flexDirection: 'column',
                     backgroundColor: '#FFF',
-                    borderRadius: 10,
-                    overflow: 'hidden'
+                    borderRadius: 10
                 }}>
-
-                    <Card style={{
-                        flexDirection: 'row',
-                        borderWidth: 0,
-                        alignItems: 'center',
-                    }}>
-                        <Checkbox style={{}}/>
-                        <Text style={{fontSize: 18}}>永兴实木家具 > </Text>
-                        <Text></Text>
-                    </Card>
 
                     <Card style={{
                         flexDirection: 'row',
                         justifyContent: 'space-between',
                         borderWidth: 0,
-                        alignItems: 'center',
+                        borderBottomWidth: 1,
                     }}>
-                        <Checkbox style={{}}/>
-                        <View style={{
-                            flexDirection: 'row',
-                            flex: 1
-                        }}>
-                            <Image style={{
-                                height: 80,
-                                width: 80,
-                                borderRadius: 8,
-                                overflow: 'hidden'
-                            }}
-                                   source={{uri: 'https://my-firstrn-text.oss-cn-beijing.aliyuncs.com/images/img.jpg'}}>
-                            </Image>
-                            <View style={{flex: 1}}>
-                                <View style={{
-                                    paddingLeft: 8
-                                }}>
-                                    <Text numberOfLines={2}
-                                          style={{lineHeight: 20}}>厂家直销实木吧椅厂家直销实木吧椅厂家直销实木吧椅厂家直销实木吧椅厂家直销实木吧椅厂家直销实木吧椅</Text>
-                                </View>
+                        <Text style={{fontSize: 20}}>必备工具</Text>
+                        <Text>查看全部工具></Text>
+                    </Card>
+                    <Card style={{
+                        padding: 18,
+                        flexDirection: 'row',
+                        justifyContent: 'space-between',
+                        borderWidth: 0
+                    }}>
+                        <View style={{alignItems: 'center'}}>
+                            <Icon name='md-wallet' size={25}/>
+                            <Text>待付款</Text>
+                        </View>
 
-                                <View style={{
-                                    margin: 10,
-                                    flexDirection: 'row',
-                                    justifyContent: 'space-between',
-                                }}>
-                                    <Text style={{color: 'red'}}>￥20.00</Text>
-                                    <View style={{
-                                        flexDirection: 'row',
-                                        justifyContent: 'flex-start'
-                                    }}>
-                                        <Text style={{
-                                            borderWidth: 0.3,
-                                            borderBottomLeftRadius: 3,
-                                            borderTopLeftRadius: 3,
-                                            // borderRadius: 3,
-                                            // paddingLeft: 5,
-                                            // paddingRight: 5,
-                                            width: 25,
-                                            textAlign: 'center',
-                                            margin: 0,
-                                            borderRightWidth: 0
-                                        }}>-</Text>
-                                        <Text style={{
-                                            borderWidth: 0.3,
-                                            // borderRadius: 3,
-                                            paddingLeft: 5,
-                                            paddingRight: 5,
-                                            margin: 0,
-                                            width: 25,
-                                            textAlign: 'center'
-                                        }}>1</Text>
-                                        <Text style={{
-                                            borderWidth: 0.3,
-                                            borderBottomRightRadius: 3,
-                                            borderTopRightRadius: 3,
-                                            // paddingLeft: 5,
-                                            // paddingRight: 5,
-                                            width: 25,
-                                            textAlign: 'center',
-                                            borderLeftWidth: 0
-                                        }}>+</Text>
-                                    </View>
-
-                                </View>
-                            </View>
+                        <View style={{alignItems: 'center'}}>
+                            <Icon name='ios-list-box' size={25}/>
+                            <Text>待发货</Text>
+                        </View>
+                        <View style={{alignItems: 'center'}}>
+                            <Icon name='md-jet' size={25}/>
+                            <Text>待收货</Text>
+                        </View>
+                        <View style={{alignItems: 'center'}}>
+                            <Icon name='md-chatboxes' size={25}/>
+                            <Text>评价</Text>
                         </View>
                     </Card>
+                    <Card style={{
+                        padding: 18,
+                        flexDirection: 'row',
+                        justifyContent: 'space-between',
+                        borderWidth: 0
+                    }}>
+                        <View style={{alignItems: 'center'}}>
+                            <Icon name='md-wallet' size={25}/>
+                            <Text>待付款</Text>
+                        </View>
+
+                        <View style={{alignItems: 'center'}}>
+                            <Icon name='ios-list-box' size={25}/>
+                            <Text>待发货</Text>
+                        </View>
+                        <View style={{alignItems: 'center'}}>
+                            <Icon name='md-jet' size={25}/>
+                            <Text>待收货</Text>
+                        </View>
+                        <View style={{alignItems: 'center'}}>
+                            <Icon name='md-chatboxes' size={25} color='orange'/>
+                            <Text>评价</Text>
+                        </View>
+                    </Card>
+
+
                 </CardSection>
             </View>
         );
     }
 }
 
-const styles = StyleSheet.create({
+const styles = {
     container: {
+        borderWidth: 1,
+        height: 200
+    },
+
+    slide: {
         flex: 1,
+        justifyContent: 'center',
+        backgroundColor: 'transparent',
+    },
+
+    slide1: {
+        flex: 1,
+        justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#fff',
+        backgroundColor: '#9DD6EB'
     },
-    bannerImg: {
-        height: width * 40 / 75,
-        width: width,
+
+    slide2: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#97CAE5',
     },
-    wrapper: {
-        width: width,
+
+    slide3: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: '#92BBD9'
     },
-    paginationStyle: {
-        bottom: 6,
+
+    text: {
+        color: '#fff',
+        fontSize: 30,
+        fontWeight: 'bold',
     },
-    dotStyle: {
-        width: 22,
-        height: 3,
-        backgroundColor: '#fff',
-        opacity: 0.4,
-        borderRadius: 0,
-    },
-    activeDotStyle: {
-        width: 22,
-        height: 3,
-        backgroundColor: '#fff',
-        borderRadius: 0,
-    },
-});
+
+    image: {
+        width,
+        flex: 1
+    }
+};
 
 HomeScreen.navigationOptions = ({navigation}) => {
     //  关键这一行设置 header:null
