@@ -45,10 +45,10 @@ class HomeScreen extends React.Component {
                 </CardSection>
 
 
-                <View style={styles.container} onPress={() => alert('ddddd')}>
+                <View style={styles.container}>
                     <Swiper style={styles.wrapper} height={200} horizontal={true} autoplay>
                         <TouchableOpacity style={styles.slide1}
-                                          onPress={() => this.props.navigation.navigate('Detils')}>
+                                          onPress={() => this.props.navigation.navigate('个人中心')}>
                             <ImageBackground style={{
                                 height: 200, width, overflow: 'hidden', justifyContent: 'center',
                                 alignItems: 'center',
@@ -159,7 +159,7 @@ class HomeScreen extends React.Component {
 
 const styles = {
     container: {
-        borderWidth: 1,
+        //borderWidth: 1,
         height: 200
     },
 
@@ -205,7 +205,7 @@ const styles = {
 HomeScreen.navigationOptions = ({navigation}) => {
     //  关键这一行设置 header:null
     return {
-        header: null,
+        header: null
     }
 };
 

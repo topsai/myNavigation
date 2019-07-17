@@ -32,8 +32,6 @@ const styles = {
         marginLeft: 8,
         marginRight: 8,
         marginTop:8
-
-
     }
 
 };
