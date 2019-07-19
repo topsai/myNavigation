@@ -1,11 +1,8 @@
 import React from 'react';
 import {
-    Button,
-    Image,
     Text,
     View,
     TextInput,
-    StyleSheet,
     Dimensions,
     ImageBackground,
     TouchableOpacity
@@ -44,11 +41,13 @@ class HomeScreen extends React.Component {
                     </Card>
                 </CardSection>
 
+                {/* 一般注释, 用 {} 包围 */}
+                {/* 轮播图 */}
 
                 <View style={styles.container}>
                     <Swiper style={styles.wrapper} height={200} horizontal={true} autoplay>
                         <TouchableOpacity style={styles.slide1}
-                                          onPress={() => this.props.navigation.navigate('个人中心')}>
+                                          onPress={() => this.props.navigation.navigate('Detils')}>
                             <ImageBackground style={{
                                 height: 200, width, overflow: 'hidden', justifyContent: 'center',
                                 alignItems: 'center',

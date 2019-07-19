@@ -8,8 +8,9 @@ const {width} = Dimensions.get('window');
 class ShopDetilScreen extends React.Component {
     render() {
         return (
-            <View style={{}}>
-                <!-- 轮播图 -->
+            <View>
+                {/* 一般注释, 用 {} 包围 */}
+                {/* 轮播图 */}
                 <View style={styles.container}>
                     <Swiper style={styles.wrapper} height={200} horizontal={true} autoplay>
                         <TouchableOpacity style={styles.slide1}
@@ -46,10 +47,37 @@ class ShopDetilScreen extends React.Component {
                         </TouchableOpacity>
                     </Swiper>
                 </View>
-                <!-- 价格 -->
+                {/* 一般注释, 用 {} 包围 */}
+                {/* 商品价格 */}
                 <View style={{backgroundColor: '#efefef'}}>
-                    <View style={{backgroundColor: '#FFF', margin: 8}}>
-                        <Text>asfasf</Text>
+                    <View style={{backgroundColor: '#FFF', padding: 8, marginBottom: 8}}>
+                        <Text style={{color: 'red'}}>￥255.00</Text>
+                        <Text style={{fontWeight: 'bold', lineHeight: 22}}>山泽超五类网线8芯纯无氧铜电脑监控网络宽带线室外50 100 305米</Text>
+                    </View>
+                    {/* 发货地址 */}
+                    <View style={{backgroundColor: '#FFF', padding: 8, marginBottom: 8}}>
+                        <Text>发货</Text>
+                        <Text>活动</Text>
+                    </View>
+                    {/* 型号选择 */}
+                    <View style={{backgroundColor: '#FFF', padding: 8, marginBottom: 8}}>
+                        <Text>选择</Text>
+                        <Text>参数</Text>
+                    </View>
+                    {/* 评价 */}
+                    <View style={{backgroundColor: '#FFF', padding: 8, marginBottom: 8}}>
+                        <Text>宝贝评价/全部</Text>
+                        <Text>活动</Text>
+                    </View>
+                    {/* 商家信息 */}
+                    <View style={{backgroundColor: '#FFF', padding: 8, marginBottom: 8}}>
+                        <Text>山泽、全部宝贝</Text>
+                        <Text>活动</Text>
+                    </View>
+                    <Text style={{textAlign: 'center', marginBottom: 8}}>------ 宝贝详情 ------</Text>
+                    {/* 商品详情 */}
+                    <View style={{backgroundColor: '#FFF', padding: 8, marginBottom: 8}}>
+                        <Text>商品详情介绍</Text>
                     </View>
                 </View>
             </View>
