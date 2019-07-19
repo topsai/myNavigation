@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image, Text, View} from "react-native";
+import {Image, Text, TouchableOpacity, View} from "react-native";
 import CardSection from "../components/CardSection";
 import Card from "../components/Card";
 import Checkbox from "../components/Checkbox";
@@ -48,25 +48,31 @@ class ShopcarScreen extends React.Component {
                         alignItems: 'center',
                     }}>
                         <Checkbox style={{}}/>
+
+
                         <View style={{
                             flexDirection: 'row',
                             flex: 1
                         }}>
-                            <Image style={{
-                                height: 80,
-                                width: 80,
-                                borderRadius: 8,
-                                overflow: 'hidden'
-                            }}
-                                   source={{uri: 'https://my-firstrn-text.oss-cn-beijing.aliyuncs.com/images/img.jpg'}}>
-                            </Image>
+                            <TouchableOpacity onPress={() => this.props.navigation.navigate('Detils')}>
+                                <Image style={{
+                                    height: 80,
+                                    width: 80,
+                                    borderRadius: 8,
+                                    overflow: 'hidden'
+                                }}
+                                       source={{uri: 'https://my-firstrn-text.oss-cn-beijing.aliyuncs.com/images/img.jpg'}}>
+                                </Image>
+                            </TouchableOpacity>
                             <View style={{flex: 1}}>
-                                <View style={{
+                                <TouchableOpacity style={{
                                     paddingLeft: 8
-                                }}>
+                                }} onPress={() => this.props.navigation.navigate('Detils')}>
                                     <Text numberOfLines={2}
-                                          style={{lineHeight: 20}}>厂家直销实木吧椅厂家直销实木吧椅厂家直销实木吧椅厂家直销实木吧椅厂家直销实木吧椅厂家直销实木吧椅</Text>
-                                </View>
+                                          style={{lineHeight: 20}}>
+                                        厂家直销实木吧椅厂家直销实木吧椅厂家直销实木吧椅厂家直销实木吧椅厂家直销实木吧椅厂家直销实木吧椅
+                                    </Text>
+                                </TouchableOpacity>
 
                                 <View style={{
                                     margin: 10,
